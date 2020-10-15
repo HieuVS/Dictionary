@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="273.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.changeWordController">
+   <children>
+      <TextField fx:id="ipChangedWord" layoutX="65.0" layoutY="23.0" prefHeight="26.0" prefWidth="317.0" promptText="Nhap tu can sua tai day" />
+      <TextArea fx:id="ipMeaning" layoutX="65.0" layoutY="69.0" prefHeight="190.0" prefWidth="451.0" promptText="Nhap nghia cua tu can sua" />
+      <Button fx:id="change" layoutX="408.0" layoutY="23.0" mnemonicParsing="false" onAction="#changeWord" text="Change and Save" />
+   </children>
+</AnchorPane>

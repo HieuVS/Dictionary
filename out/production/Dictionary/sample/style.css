@@ -1,0 +1,30 @@
+
+.speaker {
+    -fx-background-image: url("https://img.icons8.com/ios/452/medium-volume.png");
+    -fx-background-size : 26 26;
+}
+.image {
+    -fx-background-image: url("file:///C:/Users/Hieu/IdeaProjects/Dictionary/out/production/Dictionary/sample/ICON/m%C3%A0u.jpg");
+    -fx-background-position : center center;
+    -fx-background-size : 600 400;
+}
+.buttonDel {
+    -fx-background-image : url("file:///C:/Users/Hieu/IdeaProjects/Dictionary/out/production/Dictionary/sample/ICON/xoa.png");
+    -fx-background-position : center center;
+    -fx-background-size : 37 37;
+}
+.buttonAdd {
+    -fx-background-image : url("file:///C:/Users/Hieu/IdeaProjects/Dictionary/out/production/Dictionary/sample/ICON/plus-sign.png");
+    -fx-background-position : center center;
+    -fx-background-size : 37 37;
+}
+.buttonChange {
+    -fx-background-image : url("file:///C:/Users/Hieu/IdeaProjects/Dictionary/out/production/Dictionary/sample/ICON/open-wrench-tool-silhouette.png");
+    -fx-background-position : center center;
+    -fx-background-size : 37 37;
+}
+.buttonSearch {
+    -fx-background-image : url("file:///C:/Users/Hieu/IdeaProjects/Dictionary/out/production/Dictionary/sample/ICON/magnifying-glass.png");
+    -fx-background-position : center center;
+    -fx-background-size : 37 36.5;
+}

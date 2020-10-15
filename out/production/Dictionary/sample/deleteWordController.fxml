@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="182.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.deleteWordController">
+   <children>
+      <Button fx:id="cancel" layoutX="132.0" layoutY="144.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="54.0" text="Hủy">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <TextField fx:id="deleteWord" layoutX="69.0" layoutY="64.0" prefHeight="26.0" prefWidth="162.0" promptText="Nhap tu can xoa tai day" />
+      <Button fx:id="delete" layoutX="231.0" layoutY="144.0" mnemonicParsing="false" onAction="#removeWord" prefHeight="26.0" prefWidth="54.0" text="Xóa" textFill="RED">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

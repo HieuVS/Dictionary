@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="image" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="image" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ListView fx:id="words" layoutX="14.0" layoutY="78.0" prefHeight="307.0" prefWidth="270.0" />
+      <TextArea fx:id="toMeaning" layoutX="292.0" layoutY="32.0" prefHeight="313.0" prefWidth="292.0" />
+      <TextField fx:id="inputWord" layoutX="14.0" layoutY="33.0" prefHeight="27.0" prefWidth="206.0" promptText="Nhap tu tai day" />
+      <AnchorPane fx:id="speaker" layoutX="558.0" layoutY="33.0" prefHeight="26.0" prefWidth="25.0" styleClass="speaker" stylesheets="@style.css" />
+      <AnchorPane fx:id="buttonDel" layoutX="418.0" layoutY="353.0" prefHeight="37.0" prefWidth="37.0" styleClass="buttonDel" stylesheets="@style.css" />
+      <AnchorPane fx:id="buttonSearch" layoutX="233.0" layoutY="27.0" prefHeight="36.5" prefWidth="37.0" styleClass="buttonSearch" stylesheets="@style.css" />
+      <AnchorPane fx:id="buttonAdd" layoutX="367.0" layoutY="352.0" prefHeight="37.0" prefWidth="37.0" styleClass="buttonAdd" stylesheets="@style.css" />
+      <AnchorPane fx:id="buttonChange" layoutX="468.0" layoutY="352.0" prefHeight="37.0" prefWidth="37.0" styleClass="buttonChange" stylesheets="@style.css" />
+   </children>
+</AnchorPane>
