@@ -15,7 +15,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.util.TreeMap;
 
-
+/**
+*
+*/
 public class addWordController {
     private Stage stage;
     @FXML
@@ -56,6 +58,7 @@ public class addWordController {
         }
     }
     //public TreeMap<String, String> newMap = new TreeMap<>();
+
     public TreeMap<String, String> addnewWord() throws Exception {
         if( !ipNewWord.getText().isEmpty()) {
             //DCL.exportWordToFile(ipNewWord.getText(),ipMeaning.getText());
