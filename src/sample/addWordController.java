@@ -26,8 +26,7 @@ public class addWordController {
     private TextArea ipMeaning;
     @FXML
     private Button add;
-    @FXML
-    private Button confirm;
+
     public DictionaryCommandLine DCL=new DictionaryCommandLine();
     public void setStage(Stage stage) {
         this.stage = stage;
@@ -61,20 +60,16 @@ public class addWordController {
 
     public TreeMap<String, String> addnewWord() throws Exception {
         if( !ipNewWord.getText().isEmpty()) {
-            //DCL.exportWordToFile(ipNewWord.getText(),ipMeaning.getText());
+            DCL.exportWordToFile(ipNewWord.getText(),ipMeaning.getText());
             String a= ipNewWord.getText();
             String b= ipMeaning.getText();
             DCL.map = DCL.addWord(a, b);
+
         }
         return DCL.map;
         //DCL.exportToFile(DCL.map);
     }
-    @FXML
-    public void handleCloseButtonAction() {
-        javafx.event.ActionEvent actionEvent;
-        Stage stage = (Stage) confirm.getScene().getWindow();
-        stage.close();
-    }
+
     /*  @FXML
     public void add(ActionEvent e) {
         addWordController controller = addWordController.getInstance();

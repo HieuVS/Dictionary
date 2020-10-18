@@ -53,6 +53,8 @@ public class deleteWordController {
         this.DCL.insertFromDataset2();
         String word=deleteWord.getText();
         this.DCL.deleteWord(word);
+        this.DCL.deleteWordInFile(word);
+        this.DCL.reWrite();
         return this.DCL.map;
     }
 

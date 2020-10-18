@@ -52,7 +52,7 @@ public class changeWordController {
 
     public TreeMap<String, String> changeWord() throws Exception {
         if( !ipChangedWord.getText().isEmpty()) {
-            //DCL.exportWordToFile(ipNewWord.getText(),ipMeaning.getText());
+            DCL.exportWordToFile( ipChangedWord.getText(),ipMeaning.getText());
             String a= ipChangedWord.getText();
             String b= ipMeaning.getText();
             DCL.map = DCL.addWord(a, b);

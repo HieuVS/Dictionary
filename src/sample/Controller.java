@@ -130,7 +130,6 @@ public class Controller  implements Initializable {
                         newMap.clear();
                         newMap.putAll(DCL.map);
                         words.getItems().addAll(newMap.keySet());
-
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -147,6 +146,8 @@ public class Controller  implements Initializable {
                     try {
                         DCL.map=controller.addnewWord();
                         DCL.map.putAll(newMap);
+                      //  DCL.map.putAll();
+
                     } catch (Exception e) {
                         e.printStackTrace();
                     }

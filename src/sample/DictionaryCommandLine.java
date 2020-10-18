@@ -40,7 +40,7 @@ public class DictionaryCommandLine extends DictionaryManagement {
     }
 
     public void insertFromDataset() throws Exception {
-        File file = new File("D:\\Dictionary\\src\\dataset.txt");
+        File file = new File("src/sample/dataset.txt");
         //File file = new File("D:\\test\\dataTest.txt");
         FileInputStream fi = new FileInputStream(file);
         InputStreamReader isr = new InputStreamReader(fi, StandardCharsets.UTF_8);
@@ -76,7 +76,7 @@ public class DictionaryCommandLine extends DictionaryManagement {
     // map == dictionary
 
     public TreeMap<String, String> insertFromDataset2() throws Exception {
-        File file = new File("C:\\Users\\Hieu\\IdeaProjects\\Dictionary\\src\\sample\\dataset.txt");
+        File file = new File("src/sample/dataset.txt");
         //File file = new File("D:\\test\\dataTest.txt");
         FileInputStream fi = new FileInputStream(file);
         InputStreamReader isr = new InputStreamReader(fi, StandardCharsets.UTF_8);
@@ -211,7 +211,7 @@ public class DictionaryCommandLine extends DictionaryManagement {
 
     public void exportToFile(TreeMap<String,String> hjhj) throws IOException {
         BufferedWriter out = null;
-        FileWriter fstream = new FileWriter("C:\\Users\\Hieu\\Desktop\\data.txt", true);
+        FileWriter fstream = new FileWriter("src/sample/dataset.txt", true);
         for (Map.Entry<String, String> entry : hjhj.entrySet()) {
             fstream.write(entry.getKey() + "," + entry.getValue() + "\n");
             fstream.flush();   // Flush the buffer and write all changes to the disk
@@ -220,11 +220,54 @@ public class DictionaryCommandLine extends DictionaryManagement {
     }
 
     public void exportWordToFile(String word,String explain) throws IOException {
-        FileWriter fstream = new FileWriter("C:\\Users\\Hieu\\IdeaProjects\\Dictionary\\src\\sample\\dataset.txt", true);
+        FileWriter fstream = new FileWriter("src/sample/dataset.txt", true);
         BufferedWriter out = new BufferedWriter(fstream);
         out.write(word + "," + explain + "\n" );
         out.flush();   // Flush the buffer and write all changes to the disk
         out.close();    // Close the file
+    }
+
+    public void deleteWordInFile(String lineToRemove) throws FileNotFoundException {
+        File inputFile = new File("src/sample/dataset.txt");
+        File tempFile = new File("src/dataset.txt");
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(inputFile))) {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+
+            String currentLine;
+
+            while ((currentLine = reader.readLine()) != null) {
+                // trim newline when comparing with lineToRemove
+                String trimmedLine = currentLine.trim();
+                if(trimmedLine.contains(",")) {
+                    if (trimmedLine.split(",")[0].equals(lineToRemove)) continue;
+                }
+                writer.write(currentLine + System.getProperty("line.separator"));
+            }
+            writer.close();
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void reWrite() {
+        File tempFile = new File("src/dataset.txt");
+        File sourse = new File("src/sample/dataset.txt");
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(tempFile))) {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(sourse,false));
+
+            String currentLine;
+
+            while ((currentLine = reader.readLine()) != null) {
+                writer.write(currentLine + System.getProperty("line.separator"));
+            }
+            writer.close();
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void dictionaryAdvanced() throws Exception {
